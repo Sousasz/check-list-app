@@ -7,6 +7,7 @@ import TaskList from './components/TaskList';
 import useAnimations from './hooks/useAnimations';
 import useTasks from './hooks/useTasks';
 import { globalStyles as styles } from './styles/styles';
+import { COLORS, TEXTS } from './constants';
 
 export default function App() {
   const { getAnimation, animateIn, animateOut } = useAnimations();
@@ -25,10 +26,13 @@ export default function App() {
 
   return (
     <KeyboardAvoidingView
-      style={styles.container}
+      style={[styles.container, { backgroundColor: COLORS.background }]}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <Header totalPendentes={tarefas.filter(t => !t.concluida).length} />
+      <Header
+        title={TEXTS.appTitle} 
+        totalPendentes={tarefas.filter(t => !t.concluida).length}
+      />
 
       <TaskForm
         textoTarefa={textoTarefa}
