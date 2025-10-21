@@ -4,7 +4,7 @@ Aplicativo simples de **gerenciamento de tarefas** desenvolvido em **JavaScript/
 
 ---
 
-## 🧠 Objetivo da Refatoração
+## Objetivo da Refatoração
 
 O projeto passou por uma refatoração completa com foco em:
 
@@ -15,27 +15,7 @@ O projeto passou por uma refatoração completa com foco em:
 
 ---
 
-## 🧱 Estrutura Atual do Projeto
-
-check-list-app/
-├── assets/ # Imagens e ícones
-├── src/
-│ ├── components/ # Componentes reutilizáveis
-│ │ ├── Header.jsx
-│ │ ├── TaskForm.jsx
-│ │ ├── TaskList.jsx
-│ │ └── TaskItem.jsx
-│ ├── constants.js # Cores, textos e configurações globais
-│ ├── hooks/ # Hooks personalizados (useTasks, useAnimations)
-│ ├── styles/ # Estilos separados por componente
-│ ├── App.js # Componente principal
-│ └── index.js # Ponto de entrada do app
-├── package.json
-└── README.md
-
----
-
-## 🧩 Centralização de Constantes
+## Centralização de Constantes
 
 Todas as cores, textos e configurações foram movidas para [`src/constants.js`](./src/constants.js):
 
